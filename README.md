@@ -14,10 +14,10 @@
 ``python -m pip install -r requirements.txt``
 
 - Make migrations:<br>
-``python -m manage.py migrate``
+``python manage.py migrate``
 
 - Run server:<br>
-``python -m manage.py runserver``
+``python manage.py runserver``
 
 # File Structure
 
