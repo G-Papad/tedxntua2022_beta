@@ -1,0 +1,79 @@
+/* GLOBALS */
+@import "_variables.scss";
+
+html, body {
+	height: 100%;
+	width: 100%;
+
+	scrollbar-width: thin;
+	scrollbar-color: $primary $body-bg;
+	&::-webkit-scrollbar {
+		background: $body-bg;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: rgba(41, 32, 41, 0.5);
+		border-radius: calc(15px / 2);
+		&:hover {
+			background: rgba(254, 168, 55, 1);
+		}
+	}
+}
+
+body {
+	color: $body-color;
+	background-color: $body-bg;
+	// Body is a column flexbox consisting of three parts:
+	// The header, the main and the footer
+	display: flex;
+	flex-direction: column;
+	line-height: 150%;
+	.section-container {
+		margin-bottom: calc(2em + 5vw);
+	}
+}
+
+header, main, footer {
+	flex-shrink: 0;
+}
+
+main {
+	// The main part occupies the full of the remaining space in the middle,
+	// essentially pushing the footer to the bottom of the page
+	// Seen at:
+	// https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
+    flex-grow: 1;
+	padding: 0 0 $page-padding-y;
+	// Top padding so that content is not hidden by the sticky header
+	padding-top: $logo-height + 2 * 1.25em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-serif;
+    font-weight: bold;
+}
+
+a {
+	cursor: url(/static/images/arrow.png), auto;
+}
+
+.contrast-font {
+	color: $body-color;
+}
+
+@mixin underline($in: 5px, $out: 1px) {
+    // box-shadow: inset 0 (-$in) $primary, 0 $out $primary;
+}
+
+.underline,
+:hover > .underline-hover,
+.underline-parent:hover .underline-hover {
+    @include underline();
+}
+
+@include media-breakpoint-up(lg) {
+    main {
+		padding: 0 0 $page-padding-y-lg;
+		// Top padding so that content is not hidden by the sticky header
+		padding-top: $logo-height + 2 * 2.5em;
+    }
+}
