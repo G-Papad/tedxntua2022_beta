@@ -1,3 +1,6 @@
+@import "_globals.scss";
+@import "_variables.scss";
+
 $social-icon-size: 3em;
 
 #footer {
@@ -97,7 +100,7 @@ $social-icon-size: 3em;
             box-shadow: $box-shadow-soft;
         }
     }
-    ul.scrollable-cards {
+    .scrollable-cards {
         &::-webkit-scrollbar {
             display: none;
         }
@@ -110,7 +113,7 @@ $social-icon-size: 3em;
         list-style: none;
         padding: 0;
         border-radius: $border-radius;
-        li {
+        .carousel-card {
             flex-shrink: 0;
             scroll-snap-align: center;
             max-width: 100%;
@@ -160,48 +163,15 @@ $social-icon-size: 3em;
             text-shadow: 0 0 20px rgba(0, 0, 0, .9);
         }
     }
-    #newsletter{
-        #newsletter-card {
-            height: 10em;
-            width: 100%;
-            margin-bottom: 1em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            align-content: space-around;
-            #newsletter-form {
-                width: 100%;
-                margin-bottom: 1em;
-                box-shadow: $box-shadow-soft;
-                #newsletter-input-field {
-                    width: 100%;
-                    height: 2em;
-                    border-radius: $border-radius;
-                    border: 1px solid $body-color;
-                    text-align: center;
-                    outline: none;
-                    color: $body-color;
-                    background-color: transparent;
-                    display: flex;
-                    margin: auto;
-                }
-            }
-            .submit-btn {
-                width: 30%;
-                height: 2rem;
-                padding: 0 1em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $ted;
-                border-radius: $border-radius;
-                font-size: 90%;
-                &:hover {
-                    transform: scale(1.02);
-                }
-            }
-        }
+    .Action-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:60%;
+        height:30%;
+        background-color:lightgrey;
+        margin:1em;
+        border-radius: $border-radius-sm;
     }
 
     #footer-bottom {
@@ -226,29 +196,3 @@ $social-icon-size: 3em;
         }
     }
 }
-// #footer-bottom {
-//     display: flex;
-//     position: absolute;
-//     bottom: 0px;
-//     justify-content: center;
-//     width: 100vw;
-//     .legal {
-//         max-height: 2em;
-//         margin-top: .5em;
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-//         height: 100%;
-//         text-align: center;
-//         .links {
-//             > a, > span {
-//                 font-size: 0.9em;
-//             }
-//             margin-right: 1em;
-//         }
-//     }
-//     .license {
-//         font-size: .9em;
-//     }
-// }
- 

@@ -60,20 +60,20 @@ a {
 	color: $body-color;
 }
 
-@mixin underline($in: 5px, $out: 1px) {
-    // box-shadow: inset 0 (-$in) $primary, 0 $out $primary;
-}
+// @mixin underline($in: 5px, $out: 1px) {
+//     // box-shadow: inset 0 (-$in) $primary, 0 $out $primary;
+// }
 
-.underline,
-:hover > .underline-hover,
-.underline-parent:hover .underline-hover {
-    @include underline();
-}
+// .underline,
+// :hover > .underline-hover,
+// .underline-parent:hover .underline-hover {
+//     @include underline();
+// }
 
-@include media-breakpoint-up(lg) {
-    main {
-		padding: 0 0 $page-padding-y-lg;
-		// Top padding so that content is not hidden by the sticky header
-		padding-top: $logo-height + 2 * 2.5em;
-    }
-}
+// @media media-breakpoint-up(lg) {
+//     main {
+// 		padding: 0 0 $page-padding-y-lg;
+// 		// Top padding so that content is not hidden by the sticky header
+// 		padding-top: $logo-height + 2 * 2.5em;
+//     }
+// }
