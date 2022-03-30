@@ -1,72 +1,88 @@
 <nav id="nav" aria-label="Navigation header">
-    <a class="navbar-brand" href="/" aria-label="Go to homepage">
+    <a class="navbar-brand" href="" aria-label="Go to homepage">
         <img src="../../static/base/images/tedxntua_logo_whitetext.png"
                 alt="TEDxNTUA logo" />
     </a>
-
-    <!-- rename colapse -->
     <ul role="menu" id="navbar-nav" class="navbar-nav collapse"
         aria-label="Navigation menu">
         <li class="nav-item">
-            <a role="menuitem" href="/" class="nav-link">
-                <span class="nav-item-text"> Home </span>
+            <a role="menuitem" href="/"
+                class="nav-link">
+                Home
             </a>
         </li>
-        
         <li class="nav-item dropdown">
             <a role="menuitem" href="#"
                 class="nav-link dropdown-toggle"
+                id="dropdownMenuLink" 
+                data-bs-toggle="dropdown" 
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
-                <span class="nav-item-text">
-                    The event 
-                    <!-- <span class="sr-only"> (Toggle dropdown) </span> -->
+                <span class="nav-item-text" id="menubtn">
+                    The Event<span class="visually-hidden">(Toggle dropdown)</span>
                 </span>
             </a>
-            
-            <div role="menu" class="dropdown-menu">
+            <a role="menuitem" href=""
+                class="nav-link dropdown-toggle-hidden">
+                <span class="nav-item-text">
+                    The Event
+                </span>
+            </a>
+            <div role="menu" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a role="menuitem" href=""
                     class="nav-link dropdown-item">
-                    <div class="nav-dropdown-item-icon black-bg woman-icon"
-                        aria-hidden="true"></div>
-                    <span class="nav-item-text"> Speakers </span>
+                    <!-- <div class="nav-dropdown-item-icon black-bg woman-icon"
+                        aria-hidden="true"></div> -->
+                    <span class="nav-item-text underline">Speakers</span>
                 </a>
                 <a role="menuitem" href=""
                     class="nav-link dropdown-item">
-                    <div class="nav-dropdown-item-icon bordered man-icon"
-                        aria-hidden="true"></div>
-                    <span class="nav-item-text"> Performers </span>
+                    <!-- <div class="nav-dropdown-item-icon bordered man-icon"
+                        aria-hidden="true"></div> -->
+                    <span class="nav-item-text underline">Performers</span>
                 </a>
                 <a role="menuitem" href=""
                     class="nav-link dropdown-item">
-                    <div class="nav-dropdown-item-icon white-rectangles-in-black"
-                        aria-hidden="true"></div>
-                    <span class="nav-item-text"> Workshops </span>
+                    <!-- <div class="nav-dropdown-item-icon white-rectangles-in-black"
+                        aria-hidden="true"></div> -->
+                    <span class="nav-item-text underline">Workshops</span>
                 </a>
             </div>
         </li>
-
         <li class="nav-item">
-            <a role="menuitem" href=""
+            <a role="menuitem" href="/sponsors/"
                 class="nav-link">
-                <span class="nav-item-text"> Partners </span>
+                <span class="nav-item-text">Partners</span>
             </a>
         </li>
-
         <li class="nav-item">
-            <a role="menuitem" href=""
+            <a role="menuitem" href="/about/"
                 class="nav-link">
-                <span class="nav-item-text"> About us </span>
-            </a>
-        </li>
-
-        <li id="lang" class="nav-item">
-            <a role="menuitem" href="" 
-                class="nav-link">
-                <span class="nav-item-text"> EN </span>
+                <span class="nav-item-text">About Us</span>
             </a>
         </li>
     </ul>
+    <!-- <div role="group" class="btn-group language-switch"
+        aria-label="Select website language">
+        {% for code, lang_name in LANGUAGES %}
+        <a class="btn{% if code == CURR_LANG %} active{% endif %}"
+            aria-label="EN" href="">
+            EN
+        </a>
+        {% endfor %}
+    </div> -->
+    <button class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-nav" aria-controls="navbar-nav"
+            aria-label="Toggle navigation menu" aria-expanded="false">
+        <div class="navbar-toggler-icon" aria-hidden="true">
+        </div>
+    </button>
 </nav>
-
-
+<!--
+{% if settings.TEDXNTUA_SHOW_LIVE %}
+    <div id="on-air-label">
+        <i class="fa fa-circle"></i>
+        <span class="live">&nbsp;LIVE</span>
+    </div>
+{% endif %}
+-->
