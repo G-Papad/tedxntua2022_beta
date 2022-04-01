@@ -1,31 +1,5 @@
 {% load static %}
 <section id="footer-main">
-    <div id="footer-social-container">
-        <a href="https://www.instagram.com/tedxntua/?hl=en" target="_blank">
-            <img src="{% static 'base/images/social-instagram.png' %}">
-        </a>
-        <a href="https://www.facebook.com/tedxntua/" target="_blank">
-            <img src="{% static 'base/images/social-facebook.png' %}">
-        </a>
-        <a href="https://www.linkedin.com/company/tedxntua/" target="_blank">
-            <img src="{% static 'base/images/social-linkedin.png' %}">
-        </a>
-        <a href="https://www.youtube.com/channel/UCVtjgrrBdSPZERmdso2o0dw/featured" target="_blank">
-            <img src="{% static 'base/images/social-youtube.png' %}">
-        </a>
-    </div>
-    <div id="prev-talks" class="footer-container col-4">
-        <header>
-            <h4>Previous Talks</h4>
-        </header>
-        <a href="https://www.youtube.com/playlist?list=PLd7-PjFC85gz9xYWxVVqTddWLg75c8jZU" target="blank">
-            <div id="prev-talks-card">
-                <img class="lazy lazy-on-view" src="{% static 'base/images/TED-talk-2016.jpg' %}" alt="">
-                <div class="prev-talks-btn">WATCH</div>
-            </div>
-            <div id="prev-talks-btn-sm"><i class="fa fa-youtube-play"></i>&nbsp; Previous Talks</div>
-        </a>
-    </div>
     <!-- Previous Events -->
     <div id="prev-events" class="footer-container col-4">
         <header>
@@ -63,6 +37,35 @@
             </a>
         </div>
     </div> 
+    <!-- Social -->
+    <div id="footer-social-container" class="col-4">
+        <header>
+            <h4>Find us on social</h4>
+        </header>
+        <div class="social-container">
+            <a href="https://www.instagram.com/tedxntua/?hl=en" target="_blank">
+                <img src="{% static 'base/images/social-instagram.png' %}">
+            </a>
+            <a href="https://www.facebook.com/tedxntua/" target="_blank">
+                <img src="{% static 'base/images/social-facebook.png' %}">
+            </a>
+            <a href="https://www.linkedin.com/company/tedxntua/" target="_blank">
+                <img src="{% static 'base/images/social-linkedin.png' %}">
+            </a>
+            <a href="https://www.youtube.com/channel/UCVtjgrrBdSPZERmdso2o0dw/featured" target="_blank">
+                <img src="{% static 'base/images/social-youtube.png' %}">
+            </a>
+        </div>
+        <header>
+            <h4>Newsletter</h4>
+        </header>
+        <div id="newsletter-card">
+            <form id="newsletter-form">
+                <input id="newsletter-input-field" type="email" name="Email" placeholder="Your email"></input>
+            </form>
+            <div id="newsletter-submit-btn" class="submit-btn">Submit</div>
+        </div>
+    </div>
     <!-- Infos: Dialogs/Blog -->
     <div id="info" class="footer-container col-4">
         <header>
@@ -77,6 +80,7 @@
             <p>Blog</p>
         </div>
     </div>
+
 </section>
 <section id="footer-bottom">
     <div class="legal">
