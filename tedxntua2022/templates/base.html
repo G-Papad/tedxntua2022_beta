@@ -2,11 +2,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title %}{% endblock %}</title>
+        <title>{% block title %}TEDx NTUA{% endblock %}</title>
         {% block head_content %}{% endblock %}
         <!-- BOOTSTRAP -->
           <!-- CSS only -->
-          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <!-- fonts -->
         <link href="" rel="stylesheet">
         <link href="" rel="stylesheet">
@@ -18,6 +19,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{% block description %}{% endblock %}">
         <!-- Header/footer Links -->
+        <link href="{% static 'base/css/_variables.css' %}" rel="stylesheet">
+        <link href="{% static 'base/css/_globals.css' %}" rel="stylesheet">
+        <link href="{% static 'base/css/header.css' %}" rel="stylesheet">
         <link href="{% static 'base/css/footer.css' %}" rel="stylesheet">
         <link href="{% static 'base/css/header.css' %}" rel="stylesheet">
 
@@ -30,8 +34,28 @@
         <header id="header">
             {% include "header.html" %}
         </header>
-
         <main id="main">
+            <div class="phonemenu hidden" id="phone-navbar-nav" aria-label="Navigation menu">
+                <ul class="phonemenulist">
+                    <li>
+                        <a role="phone-menuitem" href="/">Home</a>
+                    </li>
+                    <li>
+                        <a role="phone-menuitem" class="dropdown-list-identifier" href="#">Event</a>
+                        <!-- <div role="phone-dropdown-item" class="dropdown-list hidden">
+                            <a href=""><span>Speakers</span></a>
+                            <a href=""><span>Workshops</span></a>
+                            <a href=""><span>Performers</span></a>
+                        </div> -->
+                    </li>
+                    <li>
+                        <a role="phone-menuitem" href="/sponsors/">Sponsors</a>
+                    </li>
+                    <li>
+                        <a role="phone-menuitem" href="/about/">About Us</a>
+                    </li>
+                </ul>
+            </div>
             {% block page_content %}{% endblock %}
         </main>
 
@@ -44,4 +68,5 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
+    <script src="{% static 'base/js/header.js' %}"></script>
 </html>
