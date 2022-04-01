@@ -391,4 +391,19 @@ a {
   font-size: .9em;
   color: white;
 }
+
+@media (max-width: 785px) {
+  #footer section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #footer .footer-container {
+    width: 100%;
+  }
+  #footer #footer-social-container {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=footer.css.map */

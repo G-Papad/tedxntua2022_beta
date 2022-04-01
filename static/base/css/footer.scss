@@ -225,3 +225,17 @@ $social-icon-size: 3em;
         }
     }
 }
+
+@media (max-width: 785px){
+    #footer{
+        section{
+            flex-direction: column;
+        }
+        .footer-container{
+            width: 100%;
+        }
+        #footer-social-container{
+            width: 100%;
+        }
+    }
+}
