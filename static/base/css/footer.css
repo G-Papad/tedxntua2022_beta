@@ -198,9 +198,7 @@ a {
 
 #footer #footer-social-container #newsletter-card .submit-btn {
   margin-left: 1em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 4rem;
   height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
